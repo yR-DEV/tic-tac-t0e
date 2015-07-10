@@ -1,0 +1,16 @@
+.game-container {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.spot {
+  width: 30%;
+  display: inline-block;
+  height: 150px;
+  overflow: hidden;
+  font-size: 150px;
+  text-align: center;
+  border: 1px solid black;
+}
