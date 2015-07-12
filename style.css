@@ -2,7 +2,7 @@
   width: 70%;
   height: auto;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 .spot {
@@ -12,5 +12,37 @@
   overflow: hidden;
   font-size: 150px;
   text-align: center;
+}
+
+.spot:nth-child(2) {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.spot:nth-child(4) {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.spot:nth-child(5) {
   border: 1px solid black;
+}
+
+.spot:nth-child(6) {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.spot:nth-child(8) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.turn-it-are {
+  width: 50%;
+  height: 150px;
+  font-size: 100px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: yellow;
 }

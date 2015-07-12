@@ -1,12 +1,3 @@
-var spot0Div = document.querySelector('.spot0');
-var spot1Div = document.querySelector('.spot1');
-var spot2Div = document.querySelector('.spot2');
-var spot3Div = document.querySelector('.spot3');
-var spot4Div = document.querySelector('.spot4');
-var spot5Div = document.querySelector('.spot5');
-var spot6Div = document.querySelector('.spot6');
-var spot7Div = document.querySelector('.spot7');
-var spot8Div = document.querySelector('.spot8');
 var spot = document.querySelectorAll('.spot'), i;
 
 //game functions goes here
@@ -17,19 +8,32 @@ var gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
 for(var i = 0; i < spot.length; i++) {
   spot[i].addEventListener('click', function(){
     var index = $(this).index();
-    if (turnCounter % 2 === 0) {
+    if(this.innerHTML) {
+      alert("ALREADY TICKED");
+    } else if (turnCounter % 2 === 0) {
       this.innerHTML = 'X';
+      turnCounter += 1;
       gameArr[index] = 1;
+      document.getElementsByClassName('turn')[0].innerHTML = "O's TuRn";
       if(winnerCheck(gameArr)){
-        alert(winnerCheck(gameArr));
+        document.getElementsByClassName('turn')[0].innerHTML = winnerCheck(gameArr);
+        var gameOver = alert(winnerCheck(gameArr));
+          gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
+          $('.game-container div').html('');
+          document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
       }
     } else {
       this.innerHTML = 'O';
+      turnCounter += 1;
       gameArr[index] = 0;
+      document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
       if(winnerCheck(gameArr)){
-        alert(winnerCheck(gameArr));
+        document.getElementsByClassName('turn')[0].innerHTML = winnerCheck(gameArr);
+        var gameOver = alert(winnerCheck(gameArr));
+          gameArr = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
+          $('.game-container div').html('');
+          document.getElementsByClassName('turn')[0].innerHTML = "X's TuRn";
       }
     }
-    turnCounter += 1;
   });
 }

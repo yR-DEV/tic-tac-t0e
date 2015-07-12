@@ -1,5 +1,3 @@
-
-
 function winnerCheck (gameArr) {
   var winArrCheck = [];
 
@@ -24,7 +22,6 @@ function winnerCheck (gameArr) {
   var drawCheck= true;
 
   for( i = 0; i < gameArr.length; i++){
-    console.log(gameArr);
     if(gameArr[i] === 'e') {
       drawCheck = false;
     }
